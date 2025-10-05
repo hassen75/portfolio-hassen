@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
+
 <body>
     <header>
         <h1>Mon Portfolio</h1>
@@ -67,24 +70,24 @@
     </footer>
 
     <script>
-    // Menu burger
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+        // Menu burger
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-    // Dark/Light toggle
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-    });
+        // Dark/Light toggle
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
 
-    // AOS init
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+        // AOS init
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 </body>
 </html>
@@ -100,12 +103,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Mon Portfolio</h1>
+    <header data-aos="fade-down">
+        <h1 class="typing">Mon Portfolio</h1>
         <p>Je suis un développeur web passionné par la création de sites modernes et efficaces.</p>
         <button id="theme-toggle">🌓</button>
     </header>
+
 
     <nav>
         <button id="burger">&#9776;</button>
@@ -148,6 +153,13 @@
     </section>
 
     <section id="contact" data-aos="fade-up">
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Votre nom" required>
+            <input type="email" name="user_email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
         <h2>Contact</h2>
         <p>Tu peux me joindre à <a href="mailto:hassen@example.com">hassen@example.com</a></p>
     </section>
@@ -157,25 +169,39 @@
     </footer>
 
     <script>
-    // Menu burger
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+        // Menu burger
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-    // Dark/Light toggle
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-    });
+        // Dark/Light toggle
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
 
-    // AOS init
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+        // AOS init
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("TON_USER_ID"); // Remplace par ton ID EmailJS
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            emailjs.sendForm("TON_SERVICE_ID", "TON_TEMPLATE_ID", this)
+                .then(() => alert("Message envoyé avec succès !"))
+                .catch(() => alert("Erreur lors de l'envoi."));
+        });
+    </script>
+
 </body>
 </html>
->>>>>>> 70aa128bcc4e53e0fe6b92bf7083ea0a388de0a2
+
