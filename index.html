@@ -191,16 +191,19 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("TON_USER_ID"); // Remplace par ton ID EmailJS
+            emailjs.init("WbzOTI6oQfjkK_62D"); // ← Ta clé publique EmailJS
         })();
 
         document.getElementById("contact-form").addEventListener("submit", function (e) {
             e.preventDefault();
-            emailjs.sendForm("TON_SERVICE_ID", "TON_TEMPLATE_ID", this)
+            emailjs.sendForm("service_mx9gk9r", "template_8ji7se4", this)
                 .then(() => alert("Message envoyé avec succès !"))
                 .catch(() => alert("Erreur lors de l'envoi."));
         });
     </script>
+
+
+
 
 </body>
 </html>
