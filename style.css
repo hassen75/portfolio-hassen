@@ -1,3 +1,4 @@
+
 ﻿/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600&display=swap');
 
@@ -213,3 +214,220 @@ footer {
     color: #ccc;
     font-family: 'Montserrat', sans-serif;
 }
+=======
+﻿/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    /* Light Mode */
+    body.light-mode {
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+        body.light-mode header {
+            background: linear-gradient(90deg, #ffcc00, #ff6a00);
+            color: #fff;
+        }
+
+        body.light-mode nav a {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+            body.light-mode nav a:hover {
+                background-color: #e6b800;
+                color: #000;
+            }
+
+        body.light-mode .project-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ff6a00, #ffcc00);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+    header h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    header p {
+        font-size: 1.125rem;
+    }
+
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Navigation */
+nav {
+    position: relative;
+    padding: 1rem;
+}
+
+#burger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ff6a00;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s ease;
+}
+
+    nav ul li::before {
+        content: none;
+        display: none;
+    }
+
+nav a {
+    background-color: #ff6a00;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    padding: 0.6rem 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+    nav a:hover,
+    nav a:focus {
+        background-color: #e65c00;
+        transform: translateY(-2px);
+    }
+
+nav ul li a:hover {
+    color: #ffd800;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+    #burger {
+        display: block;
+        margin: 0 auto 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+        nav ul.active {
+            max-height: 500px;
+        }
+}
+
+/* Sections */
+section {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Lists */
+ul {
+    padding-left: 1.5rem;
+    list-style-type: none;
+}
+
+.services-list li::before {
+    content: '✔';
+    color: #ff6a00;
+    margin-right: 0.5rem;
+}
+
+/* Services */
+.services-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+    .services-list li {
+        margin-bottom: 10px;
+    }
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+    .project-card:hover {
+        transform: scale(1.03);
+        box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+    }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+}
+>>>>>>> 70aa128bcc4e53e0fe6b92bf7083ea0a388de0a2

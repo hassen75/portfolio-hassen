@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -87,3 +88,94 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <p>Je suis un développeur web passionné par la création de sites modernes et efficaces.</p>
+        <button id="theme-toggle">🌓</button>
+    </header>
+
+    <nav>
+        <button id="burger">&#9776;</button>
+        <ul id="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" data-aos="fade-up">
+        <h2>À propos</h2>
+        <p>Développeur web basé à Paris, spécialisé en HTML, CSS, JavaScript et WordPress.</p>
+    </section>
+
+    <section id="services" data-aos="fade-up">
+        <h2>Services</h2>
+        <ul class="services-list">
+            <li>Développement de sites vitrines</li>
+            <li>Création de boutiques e-commerce</li>
+            <li>Optimisation SEO</li>
+        </ul>
+    </section>
+
+    <section id="portfolio" data-aos="fade-up">
+        <h2>Mes Réalisations</h2>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <h3>Projet 1</h3>
+                <p>Site vitrine pour un cabinet médical</p>
+                <a href="https://tonlien.com/projet1" target="_blank">Voir le projet</a>
+            </div>
+            <div class="project-card">
+                <h3>Projet 2</h3>
+                <p>Boutique e-commerce pour produits bio</p>
+                <a href="https://tonlien.com/projet2" target="_blank">Voir le projet</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Tu peux me joindre à <a href="mailto:hassen@example.com">hassen@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>Fait avec ❤️ par Hassen — 2025</p>
+    </footer>
+
+    <script>
+    // Menu burger
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Dark/Light toggle
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+
+    // AOS init
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+    </script>
+</body>
+</html>
+>>>>>>> 70aa128bcc4e53e0fe6b92bf7083ea0a388de0a2
