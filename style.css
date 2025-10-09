@@ -61,6 +61,25 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/*section galerie*/
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+    .gallery-grid img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
     .project-card:hover {
         transform: scale(1.03);
         box-shadow: 0 0 15px #ff6a00;
