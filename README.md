@@ -1,3 +1,3 @@
-# Portfolio Hassen Mokdad
+# Portfolio Hassen Mokdad — Version corrigée
 
-Version améliorée générée automatiquement.
+Mode sombre par défaut. Logo HM intégré.
